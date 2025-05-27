@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adidas Shoes Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">Adidas<span>Store</span></h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Beranda</a></li>
+          <li><a href="#products">Produk</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="cart-icon" id="cart-icon">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h2>Temukan Sepatu Adidas Impianmu</h2>
+        <p>Koleksi terbaru dengan desain stylish dan nyaman dipakai sehari-hari.</p>
+        <a href="#products" class="btn-primary">Belanja Sekarang</a>
+      </div>
+    </section>
+
+    <section class="filter container">
+      <label for="filter-price">Filter Harga:</label>
+      <select id="filter-price">
+        <option value="all">Semua</option>
+        <option value="below2m">Harga < Rp 2.000.000</option>
+        <option value="above2m">Harga ≥ Rp 2.000.000</option>
+      </select>
+    </section>
+
+    <section id="products" class="products container">
+      <!-- Produk akan muncul di sini -->
+    </section>
+  </main>
+
+  <!-- Modal Detail Produk -->
+  <div id="product-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-modal">&times;</span>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-name"></h3>
+      <p id="modal-price"></p>
+      <button id="modal-buy-btn">Beli Sekarang</button>
+    </div>
+  </div>
+
+  <!-- Keranjang Sederhana -->
+  <div id="cart" class="cart-sidebar">
+    <h3>Keranjang Belanja</h3>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: Rp 0</p>
+    <button id="checkout-btn">Checkout</button>
+  </div>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Adidas Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js">
